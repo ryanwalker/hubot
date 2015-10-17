@@ -3,7 +3,7 @@ module.exports = function (robot) {
     res.reply("starting");
     setInterval(function(){
       keepAlive(res)
-    }, 10 * 60 * 1000);
+    }, 60 * 1000);
   })
 };
 
