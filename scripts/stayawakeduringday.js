@@ -6,13 +6,12 @@ while (true) {
     hour = hour + 24;
   }
 
-  //Stay awake from 6 AM to 10 PM
   if (6 < hour && hour < 22) {
+    //Stay awake from 6 AM to 10 PM
     sleepFor10();
     ping();
   } else {
     sleepFor10()
-    setTimeout(time, 10 * 60 * 1000)
   }
 
 }
