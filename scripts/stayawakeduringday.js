@@ -1,9 +1,16 @@
+var started = false;
+
 module.exports = function (robot) {
   robot.hear(/start/i, function (res) {
-    res.reply("starting");
-    setInterval(function(){
-      keepAlive(res)
-    }, 60 * 1000);
+    if (started) {
+      res.reply("Been there, done that");
+    } else {
+      started = true;
+      res.reply("I'll keep myself awake until 10pm");
+      setInterval(function(){
+        keepAlive(res)
+      }, 60 * 1000);
+    }
   })
 };
 
