@@ -9,7 +9,7 @@ module.exports = function (robot) {
       res.reply("I'll keep myself awake until 10pm");
       setInterval(function(){
         keepAlive(res)
-      }, 60 * 1000);
+      }, 10 * 60 * 1000);
     }
   })
 };
