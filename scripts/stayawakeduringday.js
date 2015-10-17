@@ -3,16 +3,18 @@ module.exports = function (robot) {
     res.reply("starting");
     setInterval(function(){
       keepAlive(res)
-    }, 60 * 1000);
+    }, 20 * 1000);
   })
 };
 
-function itsDayTime() {
+function itsDayTime(res) {
   var today = new Date();
   var hour = today.getUTCHours() - 7;
   if (hour < 0) {
     hour = hour + 24;
   }
+
+  res.reply(hour)
 
   if (6 < hour && hour < 22) {
     //yep, it's daytime
@@ -24,7 +26,7 @@ function itsDayTime() {
 }
 
 var keepAlive = function keepAlive(res) {
-  if (itsDayTime()) {
+  if (itsDayTime(res)) {
     res.http("https://infusionsoft-hubot.herokuapp.com").get()(function(error, response, body) {
       res.reply("I'm staying awake!");
     });
