@@ -10,6 +10,6 @@ function time() {
   var currentMonth = today.getMonth();
   var december = 11;
   var year = today.getFullYear()
-  return today;
+  return today.getTimezoneOffset() / 60;
 }
 
