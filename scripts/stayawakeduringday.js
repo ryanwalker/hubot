@@ -6,6 +6,10 @@ module.exports = function(robot) {
 
 function time() {
   var today = new Date();
-  return today.getUTCHours() - 7;
+  var hour = today.getUTCHours() - 7;
+  if (hour < 0) {
+    hour = hour + 24;
+  }
+  return hour + ":" + today.getMinutes();
 }
 
