@@ -16,7 +16,7 @@ while (true) {
       sleepFor10()
     }
   }
-Syn}
+}
 
 function sleepFor10() {
   sleeping = true;
