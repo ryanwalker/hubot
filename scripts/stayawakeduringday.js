@@ -24,6 +24,11 @@ function sleepFor10() {
 
 function ping() {
   var request = new XMLHttpRequest();
-  request.open("GET", "https://infusionsoft-hubot.herokuapp.com", true);
-  request.send();
+  try {
+    request.open("GET", "https://infusionsoft-hubot.herokuapp.com", true);
+    request.send();
+  }
+  catch(err) {
+    //delicious
+  }
 }
