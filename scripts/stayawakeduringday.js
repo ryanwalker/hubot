@@ -6,10 +6,6 @@ module.exports = function(robot) {
 
 function time() {
   var today = new Date();
-  var currentDay = today.getDay();
-  var currentMonth = today.getMonth();
-  var december = 11;
-  var year = today.getFullYear()
-  return (today.getTimezoneOffset() / 60) - 7;
+  return today.getUTCHours() - 7;
 }
 
