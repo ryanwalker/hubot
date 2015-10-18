@@ -21,7 +21,7 @@ function itsDayTime(res) {
     hour = hour + 24;
   }
 
-  res.reply("The hour is " + hour)
+  //res.reply("The hour is " + hour)
 
   if (6 < hour && hour < 22) {
     //yep, it's daytime
@@ -35,9 +35,9 @@ function itsDayTime(res) {
 var keepAlive = function keepAlive(res) {
   if (itsDayTime(res)) {
     res.http("https://infusionsoft-hubot.herokuapp.com").get()(function(error, response, body) {
-      res.reply("I'm staying up until 10pm!");
+      //res.reply("I'm staying up until 10pm!");
     });
   } else {
-      res.reply("I'm going to sleep.")
+      //res.reply("I'm going to sleep.")
   }
 }
