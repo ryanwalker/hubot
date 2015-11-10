@@ -1,6 +1,6 @@
 module.exports = function(robot) {
   robot.hear(/table flip/i, function(msg){
-    msg.reply(flipit());
+    msg.send(flipit());
   });
 }
 

@@ -1,6 +1,6 @@
 module.exports = function(robot) {
   robot.hear(/christmas/i, function(msg){
-    msg.reply(christmas());
+    msg.send(christmas());
   });
 }
 
